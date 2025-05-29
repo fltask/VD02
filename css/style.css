@@ -1,0 +1,76 @@
+/* Включаем box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Контейнер для всех карточек */
+.cards-container {
+    display: flex;
+    justify-content: space-around; /* свободное пространство делится поровну между элементами */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Стили одной карточки */
+.card {
+    width: 500px;
+    height: 650px;
+    background-color: burlywood; /* #f3e7ac; */
+    border-radius: 60px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Блок с изображением */
+.photo {
+    height: 60%;
+    padding: 20px 20px 0 20px; /* top, right, bottom, left */
+}
+
+/* Стили изображения */
+.photo img {
+    display: block;
+    width: 100%; /* ширина под контейнер */
+    height: 100%; /* заполняет всю высоту .photo */
+    object-fit: cover; /* обрезает лишнее, сохраняет пропорции */
+    margin: 0 auto;
+    border-radius: 20px;
+    position: static;
+}
+
+
+/* Информация о человеке */
+.info {
+    flex: 1; /* занимает оставшееся пространство */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+/* Заголовок */
+.info h2 {
+    margin: 0 0 15px 0; /* сбросить верхний отступ, задать нижний */
+    font-size: 20px;
+    text-align: center; /* центрирование по горизонтали */
+    padding-top: 10px; /* добавить фиксированный отступ сверху */
+}
+
+/* Текст */
+.info p {
+    margin-top: 0; /* убираем лишний отступ сверху, если нужно */
+    font-size: 16px;
+}
+
+/* Добавьте это в конец вашего CSS-файла */
+body {
+    background: linear-gradient(to bottom, #34495e, #d2b48c);
+    min-height: 100vh; /* На всю высоту экрана */
+    margin: 0;
+    padding: 0;
+}
